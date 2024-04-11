@@ -12,11 +12,12 @@ public class Main {
 
         boolean ff = false;
 
-        if(x3<=x2){
+        if((x1<x4)||(x2<x3)){
             ff = true;
         }
         if(ff){
             System.out.println("intersecting");
+
         }else{
             System.out.println("nonintersecting");
         }
