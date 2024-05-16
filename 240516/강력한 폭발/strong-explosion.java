@@ -121,7 +121,7 @@ public class Main {
 			if (num == 1) {
 				for (int j = 0; j < 4; j++) {
 					int nx = nowBomb.x + bombx_1[j];
-					if (nx >= 0 && nx < n && nowBomb.y >= 0 && nowBomb.y < n) {
+					if (nx >= 0 && nx < graph.length) {
 						bombed[nx][nowBomb.y] = true;
 					}
 				}
@@ -129,20 +129,21 @@ public class Main {
 				for (int j = 0; j < 4; j++) {
 					int nx = nowBomb.x + dx[j];
 					int ny = nowBomb.y + dy[j];
-					if (nx >= 0 && nx < n && nowBomb.y >= 0 && nowBomb.y < n) {
+					if (nx >= 0 && nx < graph.length && ny >= 0 && ny < graph.length) {
+						
 						bombed[nx][ny] = true;
+						
 					}
 				}
 			} else {
 				for (int j = 0; j < 4; j++) {
 					int nx = nowBomb.x + bombx_3[j];
 					int ny = nowBomb.y + bomby_3[j];
-					if (nx >= 0 && nx < n && nowBomb.y >= 0 && nowBomb.y < n) {
+					if (nx >= 0 && nx < graph.length && ny >= 0 && ny < graph.length) {
 						bombed[nx][ny] = true;
 					}
 				}
 			}
-//			System.out.println(Arrays.toString(bomb));
 //			System.out.println("!"+nowBomb.x+" "+nowBomb.y);
 		}
 //		for (int i = 0; i < n; i++) {
