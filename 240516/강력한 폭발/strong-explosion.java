@@ -31,11 +31,16 @@ public class Main {
 		// 지도에 터진 구역 체크하기
 		mostB = 0;
 		mostT = 0;
-		backTracking(1, arr.size());
 //		for (int i = 0; i < n; i++) {
 //			System.out.println(Arrays.toString(visited[i]));
 //		}
-		System.out.println(mostT);
+		if(n==1) {
+			System.out.println(1);
+		}else{
+			backTracking(1, arr.size());
+			System.out.println(mostT);
+
+		}
 
 	}
 
